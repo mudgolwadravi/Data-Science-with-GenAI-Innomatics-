@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regx Tester</title>
+    <style> 
+        body 
+        { font-family: Arial, sans-serif; margin: 40px; } 
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; } 
+        button { padding: 10px 20px; background: #007BFF; color: white; border: none; cursor: pointer; } 
+        button:hover { background: #0056b3; } 
+        .matches { margin-top: 20px; } 
+    </style>
+</head>
+<body>
+    <h1>Regex Tester (Mini Regex101 Clone)</h1>
+
+    
+
+    <form method="POST">
+        <label>Test String:</label>
+        <textarea name="test_str" rows="3">{{test_str}}</textarea><br>
+
+        <label>Regular Expression:</label>
+        <input type="text" name="regx_pattern" value="{{regx_pattern}}">
+    
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if matches %}
+        <div class="matches">
+            <h2>Matches:</h2> 
+            <ul> 
+                {% for match in matches %} 
+                    <li>{{ match }}</li> 
+                {% endfor %} 
+            </ul>
+
+        </div>
+    {% elif  not matches %}
+        <p>No Match found!!!</p>
+    {%endif%}
+
+</body>
+</html>
