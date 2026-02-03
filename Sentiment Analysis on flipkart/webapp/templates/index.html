@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            text-align: center;
+            margin-top: 40px;
+        }
+        textarea {
+            width: 60%;
+            height: 100px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color: lightgreen;
+            border: none;
+        }
+        h2 {
+            color: #333;
+        }
+        .product-img {
+            width: 250px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🛒 Flipkart Product Review Sentiment Analysis</h1>
+    <h3>YONEX MAVIS 350 Nylon Shuttle</h3>
+
+    <!-- Product Image -->
+    <img src="{{ url_for('static', filename='images/mavis350.png') }}"
+         alt="Yonex Mavis 350 Shuttle"
+         class="product-img">
+
+    <form method="POST">
+        <textarea name="review" placeholder="Enter product review here..." required>{{ review }}</textarea><br>
+        <button type="submit">Analyze Sentiment</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Result: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
