@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/mudgo/OneDrive/Desktop/DS_GenAI_Innomatics/MLops/Experiment_Tracking_project/mlruns/4/models/m-d308b9a888c74a5fab1ae4ff341ed1b3/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-d308b9a888c74a5fab1ae4ff341ed1b3
+model_size_bytes: 391862
+model_uuid: m-d308b9a888c74a5fab1ae4ff341ed1b3
+prompts: null
+run_id: b11293ac8fd5488487d74d36958981d2
+utc_time_created: '2026-02-07 09:30:02.063850'
