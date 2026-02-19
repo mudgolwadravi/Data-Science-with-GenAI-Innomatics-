@@ -1,6 +1,0 @@
-google-genai
-streamlit
-dotenv
-
-IPython
-typing_extensions
