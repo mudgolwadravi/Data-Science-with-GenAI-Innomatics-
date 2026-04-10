@@ -1,8 +1,8 @@
-streamlit>=1.35.0
-langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-google-genai>=1.0.0
-langchain-text-splitters>=0.2.0
-google-generativeai>=0.7.0
-youtube-transcript-api>=0.6.2
-python-dotenv>=1.0.0
+streamlit
+python-dotenv
+fpdf
+langchain
+langchain-community
+langchain-core
+langchain-groq
+youtube-transcript-api
